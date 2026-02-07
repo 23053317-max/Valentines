@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine’s Day Ruchi 💗</title>
+
+<!-- Handwritten fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Allura&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  background:#fde3ea;
+  font-family:'Allura', cursive;
+  color:#8b1c3d;
+  overflow-x:hidden;
+}
+
+/* floating hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:18px;
+  animation:float 9s linear infinite;
+  opacity:0.7;
+}
+@keyframes float{
+  to{
+    transform:translateY(-110vh) translateX(30px);
+    opacity:0;
+  }
+}
+
+.container{
+  max-width:850px;
+  margin:auto;
+  padding:40px 16px 80px;
+  text-align:center;
+}
+
+/* heading */
+h1{
+  font-family:'Great Vibes', cursive;
+  font-size:3rem;
+  color:#d7265b;
+  margin-bottom:10px;
+}
+
+.sub{
+  font-size:1.4rem;
+  margin-bottom:30px;
+}
+
+/* letter card */
+.letter-box{
+  background:#fff3f7;
+  border-radius:30px;
+  padding:40px 25px;
+  box-shadow:0 20px 50px rgba(215,38,91,0.15);
+  position:relative;
+}
+
+.section-title{
+  font-size:1.6rem;
+  margin-bottom:20px;
+}
+
+.dear{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:1.55rem;
+  line-height:2.1;
+  margin-bottom:22px;
+}
+
+.signature{
+  margin-top:40px;
+  font-size:1.6rem;
+}
+
+/* yes no */
+.buttons{
+  margin-top:35px;
+}
+
+button{
+  font-family:'Allura', cursive;
+  font-size:1.4rem;
+  padding:12px 32px;
+  border:none;
+  border-radius:40px;
+  margin:10px;
+  cursor:pointer;
+}
+
+.yes{
+  background:#ff7fa3;
+  color:white;
+}
+
+.no{
+  background:#ffd1dc;
+  color:#8b1c3d;
+}
+
+/* video */
+video{
+  display:none;
+  width:100%;
+  max-width:420px;
+  margin:30px auto 0;
+  border-radius:25px;
+  box-shadow:0 20px 40px rgba(215,38,91,0.25);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💗 Happy Valentine’s Day Ruchi 💗</h1>
+<div class="sub">⏳ 7 days till Valentine 💞</div>
+
+<div class="letter-box">
+
+<div class="section-title">📜 Our beginning 💕</div>
+
+<div class="dear">Dear Ruchi,</div>
+
+<p>
+Some people come quietly into our lives  
+and end up meaning everything 💖
+</p>
+
+<p>
+Thank you for being my calm,  
+my laughter, and my comfort 🤍  
+No matter where life takes us,  
+a part of my heart will always smile  
+when it thinks of you 🌸
+</p>
+
+<p>
+I know hum dono ke beech kabhi-kabhi  
+bahut zyada fights ho jaati hain…  
+shayad main thoda rude bhi ho jata hoon 😔  
+but please believe me,  
+mera intention kabhi bhi tumhe hurt karna nahi hota.
+</p>
+
+<p>
+Tum meri safe zone ho.  
+Tumhara hona mujhe strong bhi banata hai  
+aur soft bhi 💞  
+Main bas yahi chahta hoon  
+ki tum hamesha khush raho  
+aur apni life mein hamesha shine karti raho ✨
+</p>
+
+<p>
+Best friend forever ♾️  
+always you, always us 💗
+</p>
+
+<div class="signature">
+Always grateful. Always caring. Always here 🌷
+</div>
+
+</div>
+
+<div class="buttons">
+<button class="yes" onclick="yesClicked()">YES 💗</button>
+<button class="no" onclick="noClicked()">NO 🙈</button>
+</div>
+
+<video id="loveVideo" src="valentine.mp4" controls playsinline></video>
+
+</div>
+
+<script>
+/* hearts */
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerText="💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(6+Math.random()*5)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+},450);
+
+function yesClicked(){
+  alert("You just made my heart smile in the softest way 💞");
+  const v=document.getElementById("loveVideo");
+  v.style.display="block";
+  v.play();
+}
+
+function noClicked(){
+  alert("Thoda aur soch lo na… main yahin hoon 💗");
+}
+</script>
+
+</body>
+</html>

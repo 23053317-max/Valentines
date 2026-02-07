@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise Day 🤞</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🤞 Promise Day 🤞</h1>
+<p>
+I promise to stand by you,  
+annoy you, protect you & love you always 💕
+</p>
+
+<audio autoplay loop><source src="music/love.mp3"></audio>
+<script>
+/* countdown */
+const target = new Date("Feb 11, 2026 00:00:00").getTime();
+setInterval(()=>{
+  const now = new Date().getTime();
+  const diff = target - now;
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hrs = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+  document.getElementById("timer").innerText = `${days} days ${hrs} hours`;
+},1000);
+
+/* hearts */
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerText="💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(6+Math.random()*5)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+},450);
+
+setInterval(()=>{const h=document.createElement("div");h.className="heart";h.innerHTML="🤞";h.style.left=Math.random()*100+"vw";document.body.appendChild(h);setTimeout(()=>h.remove(),6000)},400);
+</script>
+</body>
+</html>

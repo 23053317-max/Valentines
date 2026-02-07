@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7 Days of Love 💖</title>
+
+  <!-- Mobile responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 💖 Permission Overlay -->
+<div id="overlay" style="
+position:fixed;
+top:0; left:0;
+width:100%; height:100%;
+background:linear-gradient(to bottom,#ffb6c1,#ffe4e1);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+z-index:999;
+text-align:center;
+padding:20px;
+">
+
+  <h1 style="color:crimson;">💖 Hi Ruchi 💖</h1>
+  <p style="font-size:20px; max-width:320px;">
+    This little website is made with love 💕  
+    Do you want to continue?
+  </p>
+
+  <div style="margin-top:20px;">
+    <button onclick="enterSite()" style="
+      padding:12px 30px;
+      font-size:18px;
+      border:none;
+      border-radius:25px;
+      background:#fff;
+      margin-right:10px;
+      cursor:pointer;
+    ">💗 Yes</button>
+
+    <button onclick="noClick()" style="
+      padding:12px 30px;
+      font-size:18px;
+      border:none;
+      border-radius:25px;
+      background:#fff;
+      cursor:pointer;
+    ">💔 No</button>
+  </div>
+</div>
+
+<!-- 🌸 MAIN CONTENT -->
+<h1 class="fade">💘 7 Days of Love 💘</h1>
+<p class="fade">For my best friend Ruchi 💕</p>
+
+<div class="days fade">
+  <button onclick="unlock('rose.html',7)">🌹 Rose Day</button>
+  <button onclick="unlock('propose.html',8)">💌 Propose Day</button>
+  <button onclick="unlock('chocolate.html',9)">🍫 Chocolate Day</button>
+  <button onclick="unlock('teddy.html',10)">🧸 Teddy Day</button>
+  <button onclick="unlock('promise.html',11)">🤞 Promise Day</button>
+  <button onclick="unlock('hug.html',12)">🤗 Hug Day</button>
+  <button onclick="unlock('kiss.html',13)">💋 Kiss Day</button>
+  <button onclick="unlock('valentine.html',14)">❤️ Valentine Day</button>
+<button onclick="unlock('memories.html',15)">❤️ Memories Day</button>
+<!-- 💞 Memories Button -->
+  <!-- 💞 Memories Button -->
+<div class="memories-btn-wrapper">
+  <button class="memories-btn" onclick="openMemories()">
+    💞 Our Memories
+  </button>
+</div>
+
+</div>
+
+<!-- 🎶 Background music -->
+<audio id="bgMusic" loop>
+  <source src="music/love.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 💕 Floating hearts -->
+<script>
+setInterval(() => {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerHTML = "💖";
+  h.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 6000);
+}, 500);
+</script>
+
+<!-- 🔐 Unlock logic -->
+<script src="script.js"></script>
+
+<!-- 💖 YES / NO logic -->
+<script>
+function enterSite() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("bgMusic").play();
+}
+
+function noClick() {
+  alert("🥺 Okay… but this was made only for you 💔");
+}
+</script>
+
+</body>
+</html>
